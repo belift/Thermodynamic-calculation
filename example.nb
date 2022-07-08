@@ -1,0 +1,376 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14586,        366]
+NotebookOptionsPosition[     12416,        329]
+NotebookOutlinePosition[     12897,        348]
+CellTagsIndexPosition[     12854,        345]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"TiTi", "=", "0.048"}], "\n", 
+ RowBox[{"AlTi", "=", "0.0037"}], "\n", 
+ RowBox[{"MgTi", "=", 
+  RowBox[{"-", "97.6"}]}], "\n", 
+ RowBox[{"OTi", "=", 
+  RowBox[{"-", "1.026"}]}], "\n", 
+ RowBox[{"TiAl", "=", "0.04"}], "\n", 
+ RowBox[{"AlAl", "=", "0.038"}], "\n", 
+ RowBox[{"MgAl", "=", 
+  RowBox[{"-", "0.13"}]}], "\n", 
+ RowBox[{"OAl", "=", 
+  RowBox[{"-", "1.867"}]}], "\n", 
+ RowBox[{"TiMg", "=", 
+  RowBox[{"-", "47.4"}]}], "\n", 
+ RowBox[{"AlMg", "=", 
+  RowBox[{"-", "0.12"}]}], "\n", 
+ RowBox[{"MgMg", "=", 
+  RowBox[{"-", "0.047"}]}], "\n", 
+ RowBox[{"OMg", "=", 
+  RowBox[{"-", "0.602"}]}], "\n", 
+ RowBox[{"TiO", "=", 
+  RowBox[{"-", "0.34"}]}], "\n", 
+ RowBox[{"AlO", "=", 
+  RowBox[{"-", "1.105"}]}], "\n", 
+ RowBox[{"MgO", "=", 
+  RowBox[{"-", "0.369"}]}], "\n", 
+ RowBox[{"OO", "=", 
+  RowBox[{"-", "0.175"}]}]}], "Input",
+ CellChangeTimes->{{3.866247954172305*^9, 
+  3.8662479541733017`*^9}},ExpressionUUID->"9fa2f108-e2f5-4dc0-99a1-\
+23d4a00b836a"],
+
+Cell[BoxData[{
+ RowBox[{"titanium", "=", "0.27"}], "\n", 
+ RowBox[{"magnesium", "=", "0.0004"}], "\n", 
+ RowBox[{"aluminium", "=", "0.038"}], "\n", 
+ RowBox[{"oxygen", "=", "0.0152"}]}], "Input",
+ CellChangeTimes->{{3.8662479596611195`*^9, 3.86624795966212*^9}, {
+  3.8662491075807514`*^9, 
+  3.8662491487008553`*^9}},ExpressionUUID->"b2bcbd7e-ec49-4b61-b69e-\
+beb15e472435"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "*)"}], 
+  RowBox[{"Al2TiO5", "\n", 
+   RowBox[{
+    RowBox[{"2", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"10", ",", "aluminium"}], "]"}]}], "+", 
+    RowBox[{"Log", "[", 
+     RowBox[{"10", ",", "titanium"}], "]"}], "+", 
+    RowBox[{"5", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"10", ",", "oxygen"}], "]"}]}], "+", 
+    RowBox[{"2", "*", "TiAl", "*", "titanium"}], "+", 
+    RowBox[{"2", "*", "MgAl", "*", "magnesium"}], "+", 
+    RowBox[{"2", "*", "AlAl", "*", "aluminium"}], "+", 
+    RowBox[{"2", "*", "OAl", "*", "oxygen"}], "+", 
+    RowBox[{"TiTi", "*", "titanium"}], "+", 
+    RowBox[{"MgTi", "*", "magnesium"}], "+", 
+    RowBox[{"AlTi", "*", "aluminium"}], "+", 
+    RowBox[{"OTi", "*", "oxygen"}], "+", 
+    RowBox[{"5", "*", "TiO", "*", "titanium"}], "+", 
+    RowBox[{"5", "*", "MgO", "*", "magnesium"}], "+", 
+    RowBox[{"5", "*", "AlO", "*", "aluminium"}], "+", 
+    RowBox[{"5", "*", "OO", "*", "oxygen"}]}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"(*", "*)"}], "Ti2O3", "\n", 
+   RowBox[{
+    RowBox[{"2", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"10", ",", "titanium"}], "]"}]}], "+", 
+    RowBox[{"3", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"10", ",", "oxygen"}], "]"}]}], "+", 
+    RowBox[{"2", "*", "TiTi", "*", "titanium"}], "+", 
+    RowBox[{"2", "*", "MgTi", "*", "magnesium"}], "+", 
+    RowBox[{"2", "*", "AlTi", "*", "aluminium"}], "+", 
+    RowBox[{"2", "*", "OTi", "*", "oxygen"}], "+", 
+    RowBox[{"3", "*", "TiO", "*", "titanium"}], "+", 
+    RowBox[{"3", "*", "MgO", "*", "magnesium"}], "+", 
+    RowBox[{"3", "*", "AlO", "*", "aluminium"}], "+", 
+    RowBox[{"3", "*", "OO", "*", "oxygen"}]}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"(*", "*)"}], "Ti3O5", "\n", 
+   RowBox[{
+    RowBox[{"3", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"10", ",", "titanium"}], "]"}]}], "+", 
+    RowBox[{"5", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"10", ",", "oxygen"}], "]"}]}], "+", 
+    RowBox[{"3", "*", "TiTi", "*", "titanium"}], "+", 
+    RowBox[{"3", "*", "MgTi", "*", "magnesium"}], "+", 
+    RowBox[{"3", "*", "AlTi", "*", "aluminium"}], "+", 
+    RowBox[{"3", "*", "OTi", "*", "oxygen"}], "+", 
+    RowBox[{"5", "*", "TiO", "*", "titanium"}], "+", 
+    RowBox[{"5", "*", "MgO", "*", "magnesium"}], "+", 
+    RowBox[{"5", "*", "AlO", "*", "aluminium"}], "+", 
+    RowBox[{"5", "*", "OO", "*", "oxygen"}]}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"(*", "*)"}], "Mg2TiO4", "\n", 
+   RowBox[{
+    RowBox[{"2", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"10", ",", "magnesium"}], "]"}]}], "+", 
+    RowBox[{"Log", "[", 
+     RowBox[{"10", ",", "titanium"}], "]"}], "+", 
+    RowBox[{"4", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"10", ",", "oxygen"}], "]"}]}], "+", 
+    RowBox[{"TiTi", "*", "titanium"}], "+", 
+    RowBox[{"MgTi", "*", "magnesium"}], "+", 
+    RowBox[{"AlTi", "*", "aluminium"}], "+", 
+    RowBox[{"OTi", "*", "oxygen"}], "+", 
+    RowBox[{"2", "*", "TiMg", "*", "titanium"}], "+", 
+    RowBox[{"2", "*", "MgMg", "*", "magnesium"}], "+", 
+    RowBox[{"2", "*", "AlMg", "*", "aluminium"}], "+", 
+    RowBox[{"2", "*", "OMg", "*", "oxygen"}], "+", 
+    RowBox[{"4", "*", "TiO", "*", "titanium"}], "+", 
+    RowBox[{"4", "*", "MgO", "*", "magnesium"}], "+", 
+    RowBox[{"4", "*", "AlO", "*", "aluminium"}], "+", 
+    RowBox[{"4", "*", "OO", "*", "oxygen"}]}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"(*", "*)"}], "MgAl2O4", "\n", 
+   RowBox[{
+    RowBox[{"Log", "[", 
+     RowBox[{"10", ",", "magnesium"}], "]"}], "+", 
+    RowBox[{"2", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"10", ",", "aluminium"}], "]"}]}], "+", 
+    RowBox[{"4", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"10", ",", "oxygen"}], "]"}]}], "+", 
+    RowBox[{"TiMg", "*", "titanium"}], "+", 
+    RowBox[{"MgMg", "*", "magnesium"}], "+", 
+    RowBox[{"AlMg", "*", "aluminium"}], "+", 
+    RowBox[{"OMg", "*", "oxygen"}], "+", 
+    RowBox[{"2", "*", "TiAl", "*", "titanium"}], "+", 
+    RowBox[{"2", "*", "MgAl", "*", "magnesium"}], "+", 
+    RowBox[{"2", "*", "AlAl", "*", "aluminium"}], "+", 
+    RowBox[{"2", "*", "OAl", "*", "oxygen"}], "+", 
+    RowBox[{"4", "*", "TiO", "*", "titanium"}], "+", 
+    RowBox[{"4", "*", "MgO", "*", "magnesium"}], "+", 
+    RowBox[{"4", "*", "AlO", "*", "aluminium"}], "+", 
+    RowBox[{"4", "*", "OO", "*", "oxygen"}]}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"(*", "*)"}], "MgTi2O4", "\n", 
+   RowBox[{
+    RowBox[{"Log", "[", 
+     RowBox[{"10", ",", "magnesium"}], "]"}], "+", 
+    RowBox[{"2", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"10", ",", "titanium"}], "]"}]}], "+", 
+    RowBox[{"4", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"10", ",", "oxygen"}], "]"}]}], "+", 
+    RowBox[{"TiMg", "*", "titanium"}], "+", 
+    RowBox[{"MgMg", "*", "magnesium"}], "+", 
+    RowBox[{"AlMg", "*", "aluminium"}], "+", 
+    RowBox[{"OMg", "*", "oxygen"}], "+", 
+    RowBox[{"2", "*", "TiTi", "*", "titanium"}], "+", 
+    RowBox[{"2", "*", "MgTi", "*", "magnesium"}], "+", 
+    RowBox[{"2", "*", "AlTi", "*", "aluminium"}], "+", 
+    RowBox[{"2", "*", "OTi", "*", "oxygen"}], "+", 
+    RowBox[{"4", "*", "TiO", "*", "titanium"}], "+", 
+    RowBox[{"4", "*", "MgO", "*", "magnesium"}], "+", 
+    RowBox[{"4", "*", "AlO", "*", "aluminium"}], "+", 
+    RowBox[{"4", "*", "OO", "*", "oxygen"}]}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", "*)"}], 
+   RowBox[{"Mg", " ", "O"}], "\n", 
+   RowBox[{
+    RowBox[{"Log", "[", 
+     RowBox[{"10", ",", "magnesium"}], "]"}], "+", 
+    RowBox[{"Log", "[", 
+     RowBox[{"10", ",", "oxygen"}], "]"}], "+", 
+    RowBox[{"TiMg", "*", "titanium"}], "+", 
+    RowBox[{"MgMg", "*", "magnesium"}], "+", 
+    RowBox[{"AlMg", "*", "aluminium"}], "+", 
+    RowBox[{"OMg", "*", "oxygen"}], "+", 
+    RowBox[{"TiO", "*", "titanium"}], "+", 
+    RowBox[{"MgO", "*", "magnesium"}], "+", 
+    RowBox[{"AlO", "*", "aluminium"}], "+", 
+    RowBox[{"OO", "*", "oxygen"}]}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", "*)"}], "Al2O3", "\n", 
+   RowBox[{
+    RowBox[{"2", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"10", ",", "aluminium"}], "]"}]}], "+", 
+    RowBox[{"3", "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{"10", ",", "oxygen"}], "]"}]}], "+", 
+    RowBox[{"2", "*", "TiAl", "*", "titanium"}], "+", 
+    RowBox[{"2", "*", "MgAl", "*", "magnesium"}], "+", 
+    RowBox[{"2", "*", "AlAl", "*", "aluminium"}], "+", 
+    RowBox[{"2", "*", "OAl", "*", "oxygen"}], "+", 
+    RowBox[{"3", "*", "TiO", "*", "titanium"}], "+", 
+    RowBox[{"3", "*", "MgO", "*", "magnesium"}], "+", 
+    RowBox[{"3", "*", "AlO", "*", "aluminium"}], "+", 
+    RowBox[{"3", "*", "OO", "*", "oxygen"}]}], "\n"}]}]], "Input",
+ CellChangeTimes->{{3.866248174963972*^9, 3.8662481767923026`*^9}},
+ CellLabel->
+  "In[101]:=",ExpressionUUID->"c1b7e482-1c2d-4606-a5b4-c401110dac74"],
+
+Cell[BoxData["Al2TiO5"], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.8662491637640057`*^9}},
+ CellLabel->
+  "Out[101]=",ExpressionUUID->"7c3dd993-0470-4076-8d33-9fb07c97061f"],
+
+Cell[BoxData[
+ RowBox[{"-", "13.355597978319905`"}]], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.8662491637640057`*^9}},
+ CellLabel->
+  "Out[102]=",ExpressionUUID->"85822d4e-562f-4491-8a09-7e4ebd594188"],
+
+Cell[BoxData["Ti2O3"], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.8662491637640057`*^9}},
+ CellLabel->
+  "Out[103]=",ExpressionUUID->"9f5516fc-15d1-4d03-b715-ee0f350055c1"],
+
+Cell[BoxData[
+ RowBox[{"-", "9.055790986991942`"}]], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.8662491637640057`*^9}},
+ CellLabel->
+  "Out[104]=",ExpressionUUID->"86f61e2e-573e-4112-8338-9fe3e631852b"],
+
+Cell[BoxData["Ti3O5"], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.8662491637640057`*^9}},
+ CellLabel->
+  "Out[105]=",ExpressionUUID->"546b6316-9430-43d0-b627-2f5f3bcf2fa7"],
+
+Cell[BoxData[
+ RowBox[{"-", "14.246723978319903`"}]], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.8662491637640057`*^9}},
+ CellLabel->
+  "Out[106]=",ExpressionUUID->"6407f691-90fa-45c6-852c-7300101382e6"],
+
+Cell[BoxData["Mg2TiO4"], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.8662491637640057`*^9}},
+ CellLabel->
+  "Out[107]=",ExpressionUUID->"cb9de2e5-1903-464a-b37e-8ed47b370d86"],
+
+Cell[BoxData[
+ RowBox[{"-", "13.456212973983884`"}]], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.8662491637640057`*^9}},
+ CellLabel->
+  "Out[108]=",ExpressionUUID->"c6eff066-9bcc-4aea-b6af-de05fc95002d"],
+
+Cell[BoxData["MgAl2O4"], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.8662491637640057`*^9}},
+ CellLabel->
+  "Out[109]=",ExpressionUUID->"53c1d8e6-eb15-47d5-9b21-0c30149d420e"],
+
+Cell[BoxData[
+ RowBox[{"-", "12.297304978319904`"}]], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.866249163779621*^9}},
+ CellLabel->
+  "Out[110]=",ExpressionUUID->"615764f1-d052-4332-b6b9-a9b4b4679364"],
+
+Cell[BoxData["MgTi2O4"], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.866249163779621*^9}},
+ CellLabel->
+  "Out[111]=",ExpressionUUID->"9a4326f4-f9be-4938-bdaf-be01cf2d45c9"],
+
+Cell[BoxData[
+ RowBox[{"-", "13.188430978319904`"}]], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.866249163779621*^9}},
+ CellLabel->
+  "Out[112]=",ExpressionUUID->"65b39275-5af7-43a5-a6df-001c63b64acf"],
+
+Cell[BoxData[
+ RowBox[{"Mg", " ", "O"}]], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.866249163779621*^9}},
+ CellLabel->
+  "Out[113]=",ExpressionUUID->"c9a20d0c-e04a-4ab2-858c-2f5112a34c9b"],
+
+Cell[BoxData[
+ RowBox[{"-", "4.132639991327961`"}]], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.866249163779621*^9}},
+ CellLabel->
+  "Out[114]=",ExpressionUUID->"5db81b69-5701-46ce-9b09-1742cc057d83"],
+
+Cell[BoxData["Al2O3"], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.866249163779621*^9}},
+ CellLabel->
+  "Out[115]=",ExpressionUUID->"db5bf36c-062c-41ae-84ff-9ac8a85992fe"],
+
+Cell[BoxData[
+ RowBox[{"-", "8.164664986991943`"}]], "Output",
+ CellChangeTimes->{
+  3.866248186356008*^9, {3.86624915388783*^9, 3.866249163779621*^9}},
+ CellLabel->
+  "Out[116]=",ExpressionUUID->"a686f565-cd56-4038-a00e-ecce2b72cb94"]
+}, Open  ]]
+},
+WindowSize->{572.4, 626.4},
+WindowMargins->{{
+  436.79999999999995`, Automatic}, {-30.59999999999991, Automatic}},
+Magnification:>1.2 Inherited,
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (2021\:5e742\:67085\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f24dd726-1fff-4120-a401-a7ac081f966b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 989, 31, 383, "Input",ExpressionUUID->"9fa2f108-e2f5-4dc0-99a1-23d4a00b836a"],
+Cell[1550, 53, 375, 8, 104, "Input",ExpressionUUID->"b2bcbd7e-ec49-4b61-b69e-beb15e472435"],
+Cell[CellGroupData[{
+Cell[1950, 65, 6832, 156, 1641, "Input",ExpressionUUID->"c1b7e482-1c2d-4606-a5b4-c401110dac74"],
+Cell[8785, 223, 209, 4, 39, "Output",ExpressionUUID->"7c3dd993-0470-4076-8d33-9fb07c97061f"],
+Cell[8997, 229, 238, 5, 39, "Output",ExpressionUUID->"85822d4e-562f-4491-8a09-7e4ebd594188"],
+Cell[9238, 236, 207, 4, 39, "Output",ExpressionUUID->"9f5516fc-15d1-4d03-b715-ee0f350055c1"],
+Cell[9448, 242, 237, 5, 39, "Output",ExpressionUUID->"86f61e2e-573e-4112-8338-9fe3e631852b"],
+Cell[9688, 249, 207, 4, 39, "Output",ExpressionUUID->"546b6316-9430-43d0-b627-2f5f3bcf2fa7"],
+Cell[9898, 255, 238, 5, 39, "Output",ExpressionUUID->"6407f691-90fa-45c6-852c-7300101382e6"],
+Cell[10139, 262, 209, 4, 39, "Output",ExpressionUUID->"cb9de2e5-1903-464a-b37e-8ed47b370d86"],
+Cell[10351, 268, 238, 5, 59, "Output",ExpressionUUID->"c6eff066-9bcc-4aea-b6af-de05fc95002d"],
+Cell[10592, 275, 209, 4, 39, "Output",ExpressionUUID->"53c1d8e6-eb15-47d5-9b21-0c30149d420e"],
+Cell[10804, 281, 236, 5, 39, "Output",ExpressionUUID->"615764f1-d052-4332-b6b9-a9b4b4679364"],
+Cell[11043, 288, 207, 4, 39, "Output",ExpressionUUID->"9a4326f4-f9be-4938-bdaf-be01cf2d45c9"],
+Cell[11253, 294, 236, 5, 39, "Output",ExpressionUUID->"65b39275-5af7-43a5-a6df-001c63b64acf"],
+Cell[11492, 301, 224, 5, 39, "Output",ExpressionUUID->"c9a20d0c-e04a-4ab2-858c-2f5112a34c9b"],
+Cell[11719, 308, 235, 5, 39, "Output",ExpressionUUID->"5db81b69-5701-46ce-9b09-1742cc057d83"],
+Cell[11957, 315, 205, 4, 39, "Output",ExpressionUUID->"db5bf36c-062c-41ae-84ff-9ac8a85992fe"],
+Cell[12165, 321, 235, 5, 39, "Output",ExpressionUUID->"a686f565-cd56-4038-a00e-ecce2b72cb94"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
